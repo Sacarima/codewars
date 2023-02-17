@@ -32,3 +32,19 @@ function grow(x) {
 }
 
 console.log(grow([1, 2, 3, 4] ))
+
+/*
+Write a function which calculates the average of the numbers in a given list.
+
+Note: Empty arrays should return 0.
+
+
+*/
+
+function findAverage(array) {
+    const sum = array.reduce((a, b)=> (a + b), 0)
+    const avg = (sum / array.length) || 0;
+    return avg;
+  }
+  
+  console.log(findAverage([1, 2, 3, 4, 5, 6, 8, 9, 12]))
