@@ -23,6 +23,12 @@ Given a non-empty array of integers, return the result of multiplying the values
 
 function grow(x) {
     return x.reduce((a, b)=> (a * b))
+    // this is a different solution to this problem
+    /*let num = 1;
+    for(let i = 0; i < x.length; i++) {
+        num *= x[i]
+    }
+    return num;*/
 }
 
 console.log(grow([1, 2, 3, 4] ))
