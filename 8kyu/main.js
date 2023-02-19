@@ -48,3 +48,20 @@ function findAverage(array) {
   }
   
   console.log(findAverage([1, 2, 3, 4, 5, 6, 8, 9, 12]))
+
+  /*
+  Write a function to split a string and convert it into an array of words.
+
+Examples (Input ==> Output):
+"Robin Singh" ==> ["Robin", "Singh"]
+
+"I love arrays they are my favorite" ==> ["I", "love", "arrays", "they", "are", "my", "favorite"]
+ARRAYSSTRINGSFUNDAMENTALS
+  */
+
+function stringToArray(string) {
+    const separa = string.split( ' ' );
+    return separa;
+}
+
+console.log(stringToArray("I love arrays they are my favorite"));
