@@ -65,3 +65,27 @@ function stringToArray(string) {
 }
 
 console.log(stringToArray("I love arrays they are my favorite"));
+
+/*
+Complete the solution so that it reverses the string passed into it.
+
+'world'  =>  'dlrow'
+'word'   =>  'drow'
+*/
+//solution 1
+function solution(str){
+    return str.split('').reverse().join('')
+  }
+
+// solution 2
+  
+  const solution = s => [...s].reverse().join('')
+ 
+  // solution 3
+  function solution(s){
+    let o = '';
+    for (let i = s.length - 1; i >= 0; i--)
+      o += s[i];
+    return o;
+  }
+
