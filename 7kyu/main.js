@@ -10,3 +10,18 @@ All numbers are valid Int32, no need to validate them.
 There will always be at least one number in the input string.
 Output string must be two numbers separated by a single space, and highest number is first.
 */
+
+// first solution
+
+function highAndLow(numbers) {
+    numbers = numbers.split( " " );
+    return `${Math.max(...numbers)} ${Math.min(...numbers)}`
+    
+}
+
+// second solution 
+
+function highAndLow(numbers){
+    let arr = numbers.split(' ').map(Number);  
+    return Math.max(...arr) + ' ' + Math.min(...arr);
+  }
