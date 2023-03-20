@@ -103,3 +103,42 @@ function minMax(number) {
   const max = Math.max(...arr);
   return [min, max];
 }
+
+/*
+  Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
+
+For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1. (81-1-1-81)
+
+Example #2: An input of 765 will/should return 493625 because 72 is 49, 62 is 36, and 52 is 25. (49-36-25)
+
+Note: The function accepts an integer and returns an integer.
+
+*/
+
+// 1th solution
+
+function squareDigits(num){
+  return Number(num.toString().split('').map(number => number ** 2).join(''));
+}
+
+// 2nd solution
+
+function squareDigits(num){
+  const array = num.toString().split('').map( function(int) {
+    const i = parseInt(int);
+    return i * i;
+  });
+  
+  return parseInt(array.join(""));
+}
+
+// 3rd solution
+
+function squareDigits(num){
+  const string = num.toString();
+  const results = [];
+  for (let i = 0; i < string.length; i++){
+      results[i] = string[i] * string[i];
+  }
+  return Number(results.join(''));
+};
