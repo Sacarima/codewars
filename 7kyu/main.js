@@ -164,3 +164,63 @@ function addBinary(a,b) {
 
 const addBinary = (a, b) => Math.trunc(a + b).toString(2)
 
+/*
+   rectangle! Those blasted things! If you just had a way to know, whether you're currently working in vain… Wait! That's it! You just have to check if your number of building blocks is a perfect square.
+
+Task
+Given an integral number, determine if it's a square number:
+
+In mathematics, a square number or perfect square is an integer that is the square of an integer; in other words, it is the product of some integer with itself.
+
+The tests will always use some integral number, so don't worry about that in dynamic typed languages.
+
+Examples
+-1  =>  false
+ 0  =>  true
+ 3  =>  false
+ 4  =>  true
+25  =>  true
+26  =>  false
+*/
+
+// solution 1
+
+const isSquare = function(n){
+  let numchk;
+  for(let i = 0; i < n+1; i++){
+  numchk = n/i;
+  if(i === numchk){
+  return true;
+  }
+  }
+  if(n<0){
+  return false
+  } else if(numchk==1) {
+  return false
+  } else {
+  return true
+  }
+  }
+  
+  // solution 2 
+  
+  function isSquare(n) {
+    return Math.sqrt(n) % 1 === 0;
+  }
+  
+  // solution 3 
+  
+  var isSquare = function(n){
+    return Number.isInteger(Math.sqrt(n));
+  }
+  
+  // solution 4
+  
+  var isSquare = function(n){
+  
+    if((Math.sqrt(n) % 1) == 0)
+      return true;
+    else
+      return false;
+  }
+
