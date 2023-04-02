@@ -382,6 +382,21 @@ function myLanguages(results) {
   return totalResult.sort((a, b) => results[b] - results[a])
 }
 
+// solution 2 
+
+function myLanguages(results) {
+  return Object.keys(results).filter(r => results[r] > 59).sort((a,b) => results[b] - results[a]);
+}
+
+// solution 3
+
+const myLanguages = results => 
+  Object.entries(results)
+        .sort((a,b)=> b[1] - a[1])
+        .filter(i=> i[1] >= 60)
+        .map(i => i[0])
+
+
 
 
 
