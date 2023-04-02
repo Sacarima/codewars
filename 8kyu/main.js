@@ -167,4 +167,13 @@ function noSpace(x){
   return x.replace(/ /g, '')
 }
 
-// solution 2
+// Convert string to number 
+
+// solution 1 
+
+function toNumber (str) {
+  return Number(str);
+  return null;
+} 
+
+
