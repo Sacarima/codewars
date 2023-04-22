@@ -167,7 +167,7 @@ function noSpace(x){
   return x.replace(/ /g, '')
 }
 
-// Convert string to number 
+// write a function that Converts a string to number 
 
 // solution 1 
 
@@ -229,3 +229,26 @@ function feast(beast, dish) {
     return dish.startsWith(beast[0]) && dish.endsWith(beast[beast.length-1])
   }
   
+  /*
+	If you can't sleep, just count sheep!!
+Task:
+Given a non-negative integer, 3 for example, return a string with a murmur: "1 sheep...2 sheep...3 sheep...". Input will always be valid, i.e. no negative integers.
+
+*/ 
+
+//solution 1
+
+var countSheep = function (num){
+  //your code here
+  let result = '';
+  for(let i = 1; i <= num; i++) {
+    result += i.toString() + ' sheep...'
+  }
+  return result
+}
+
+//solution 2
+
+const countSheep = function(num) {
+    return [...Array(num).keys()].reduce((res, i) => res + (i + 1) + ' sheep...', '');
+  }
