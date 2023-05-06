@@ -31,3 +31,7 @@ const fifteen = inventors.filter(inventor => (inventor.year >= 1500 && inventor.
         return -1;
       }
     });
+// solution 2
+
+const order = inventors.sort((a, b) => a.year > b.year ? 1 : -1);
+    console.table(ordered);
