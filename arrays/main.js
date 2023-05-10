@@ -61,3 +61,11 @@ const order = inventors.sort((a, b) => a.year > b.year ? 1 : -1);
     //             .filter(streetName => streetName.includes('de'));
     const category = document.querySelector('.mw-category');
     const links = Array.from(category.querySelectorAll(''))
+    // 7. sort Exercise
+    // Sort the people alphabetically by last name
+    const alpha = people.sort((lastOne, nextOne) => {
+      const [aLast, aFirst] = lastOne.split(', ');
+      const [bLast, bFirst] = nextOne.split(', ');
+      return aLast > bLast ? 1 : -1;
+    });
+    console.log(alpha);
