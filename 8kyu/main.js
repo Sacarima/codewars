@@ -380,3 +380,9 @@ function getAverage(marks){
   const avg = Math.floor((sum / marks.length) || 0)
   return Math.round(avg)
 }
+
+//solution 2 
+
+function getAverage(marks){
+  return Math.floor(marks.reduce((sum, x) => sum + x) / marks.length);
+}
