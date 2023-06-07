@@ -439,3 +439,8 @@ var summation = function (num) {
   }
   return sum;
 }
+
+
+// solution 2 
+
+const summation = n => n * (n + 1) / 2;
