@@ -439,3 +439,17 @@ var number=function(array){
   //your awesome code here
   return array.map((element, index) => `${index + 1}: ${element}`)
 }
+
+// solution 2
+
+var number = function(arr) {
+  var newArr = [];
+    if (arr.length === 0) {
+      return [];
+    } else {
+      for (var i = 0, len = arr.length; i < len; i += 1) {
+        newArr.push((i + 1) + ': ' + arr[i]);
+      }
+    }
+    return newArr;
+  }
