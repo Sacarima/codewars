@@ -556,3 +556,10 @@ function index(array, n){
     return Math.pow(array.find((number) => number == array[n]), n);
   }
 }
+
+// solution 2
+
+function index(array, n){
+  return array[n] ** n || -1;
+}
+
