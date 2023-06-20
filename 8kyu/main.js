@@ -563,3 +563,19 @@ function index(array, n){
   return array[n] ** n || -1;
 }
 
+/*
+  Sort and Star
+
+  You will be given a list of strings. You must sort it alphabetically (case-sensitive, and based on the ASCII values of the chars) and then return the first value.
+
+The returned value must be a string, and have "***" between each of its letters.
+
+You should not remove or add elements from/to the array.
+*/
+
+// Solution 1
+
+function twoSort(s) {
+  let sorting = s.sort((a, b) => a === b ? 0 : a < b ? -1 : 1)
+  return sorting[0].split('').join('***')
+}
