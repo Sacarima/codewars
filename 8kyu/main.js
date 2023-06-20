@@ -579,3 +579,7 @@ function twoSort(s) {
   let sorting = s.sort((a, b) => a === b ? 0 : a < b ? -1 : 1)
   return sorting[0].split('').join('***')
 }
+
+// solution 2
+
+twoSort = s => s.sort()[0].split('').join('***')
