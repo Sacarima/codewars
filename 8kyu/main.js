@@ -583,3 +583,12 @@ function twoSort(s) {
 // solution 2
 
 twoSort = s => s.sort()[0].split('').join('***')
+
+// solution with explanation 
+
+function twoSort(s) {
+  const sorting = s.sort(); // the default sort function works
+  return sorting[0] // take first element
+    .split("") // split string into chars
+    .join("***"); // join chars with ***
+}
