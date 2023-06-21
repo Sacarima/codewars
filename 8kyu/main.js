@@ -618,3 +618,11 @@ Examples
 function array(string) {
   return string.split(',').slice(1, -1).join(' ') || null
 }
+
+// solution 2
+const array = (arr) => {
+  arr = arr.split(',')
+  arr.pop()
+  arr.shift()
+  return arr.join(' ') === '' ? null : arr.join(' ')
+}
