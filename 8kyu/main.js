@@ -660,3 +660,8 @@ function divisibleBy(numbers, divisor) {
 function divisibleBy(numbers, divisor) {
   return numbers.filter(n => n % divisor === 0)
 }
+
+// solution 3
+
+const divisibleBy = (numbers, divisor) => numbers.filter(number => !(number % divisor));
+
