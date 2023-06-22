@@ -654,3 +654,9 @@ function divisibleBy(numbers, divisor) {
   // return results
   return result;
 }
+
+//solution 2
+
+function divisibleBy(numbers, divisor) {
+  return numbers.filter(n => n % divisor === 0)
+}
