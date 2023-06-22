@@ -626,3 +626,31 @@ const array = (arr) => {
   arr.shift()
   return arr.join(' ') === '' ? null : arr.join(' ')
 }
+
+/*
+  Find numbers which are divisible by given number
+
+  Complete the function which takes two arguments and returns all numbers which are divisible by the given divisor. First argument is an array of numbers and the second is the divisor.
+
+Example(Input1, Input2 --> Output)
+[1, 2, 3, 4, 5, 6], 2 --> [2, 4, 6]
+*/
+
+// solution 1
+
+function divisibleBy(numbers, divisor) {
+  // create variable for results
+  const result = [];
+
+  // loop over numbers
+  for (const n of numbers) {
+    // check if current number is divisible by divisor
+    if (n % divisor === 0) {
+      // if yes, save it into results variable
+      result.push(n);
+    }
+  }
+
+  // return results
+  return result;
+}
