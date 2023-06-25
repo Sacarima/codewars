@@ -531,3 +531,9 @@ function getCount(str) {
 function getCount(str) {
   return str.split('').filter(c => "aeiouAEIOU".includes(c)).length;
  }
+
+ // solution 4
+
+ function getCount(str) {
+  return str.replace(/[^aeiou]/gi, '').length;
+}
