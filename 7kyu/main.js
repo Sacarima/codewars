@@ -519,3 +519,9 @@ function getCount(str) {
   }
   return vowelC;
 }
+
+// solution 2
+
+function getCount(str) {
+  return (str.match(/[aeiou]/ig)||[]).length;
+}
