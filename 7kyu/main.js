@@ -605,3 +605,12 @@ function dontGiveMeFive(start, end){
   }
   return res.length;
 }
+
+//solution 3
+
+function dontGiveMeFive(start, end)
+{
+  return Array.from(Array(end-start+1),(e,i)=>i+start)
+          .filter((e)=>(''+e).indexOf('5')===-1)
+          .length;
+}
