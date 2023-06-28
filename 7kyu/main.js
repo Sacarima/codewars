@@ -661,3 +661,9 @@ function adjacentElementsProduct(array) {
   }  
   return Math.max(...newArr)
 }
+
+// solution 3
+
+function adjacentElementsProduct(a) {
+  return Math.max(...a.map((x,i)=>x*a[i+1]).slice(0,-1))
+}
