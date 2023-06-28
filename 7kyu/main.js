@@ -667,3 +667,9 @@ function adjacentElementsProduct(array) {
 function adjacentElementsProduct(a) {
   return Math.max(...a.map((x,i)=>x*a[i+1]).slice(0,-1))
 }
+
+// Solution 4
+
+const adjacentElementsProduct = (array) => array.slice(1).reduce(
+  (max, cur, i) => Math.max(array[i] * cur, max), -Infinity
+);
