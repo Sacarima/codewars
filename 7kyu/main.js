@@ -773,3 +773,8 @@ function flattenAndSort(array) {
     
   return newArray.sort((a,b) =>  a-b);
 }
+
+//solution 5
+
+
+const flattenAndSort = $ => $.toString().split(',').filter(e => e).map(Number).sort((a,b)=>a-b)
