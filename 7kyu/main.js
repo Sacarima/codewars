@@ -749,3 +749,12 @@ function flattenAndSort(array) {
 // solution 2 
 
 const flattenAndSort = (array) => array.flat().sort((a, b) => a-b);
+
+//solution 3
+
+function flattenAndSort(array) {
+  return array
+    .reduce((result, current) => [...result, ...current],[])
+    .sort((a, b) => a - b)
+    ;
+}
