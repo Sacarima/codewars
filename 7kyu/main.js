@@ -745,3 +745,7 @@ Please, keep in mind, that JavaScript is by default sorting objects alphabetical
 function flattenAndSort(array) {
   return [].concat(...array).sort((a,b) => a - b);
 }
+
+// solution 2 
+
+const flattenAndSort = (array) => array.flat().sort((a, b) => a-b);
