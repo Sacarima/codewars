@@ -803,3 +803,10 @@ var capitals2 = function (word) {
     return result;
   }, []);
 };
+
+//solution 3
+
+const capitals3 = word => { 
+  const capsArr = word.match(/[A-Z]/g)
+  return capsArr.map( x => { 
+    return word.indexOf(x) }) }
