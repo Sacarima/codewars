@@ -794,3 +794,12 @@ var capitals = function (word) {
              .map(function(l, i) { if (l.toUpperCase() === l) return i; })
              .filter(function(i) { return i != null })
 };
+
+//solution 2
+
+var capitals2 = function (word) {
+  return word.split('').reduce(function(result, c, i) {
+    if (c.toUpperCase() === c) result.push(i);
+    return result;
+  }, []);
+};
