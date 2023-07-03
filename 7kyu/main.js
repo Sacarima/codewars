@@ -864,3 +864,9 @@ function gimme (triplet) {
 function gimme(triplet) {
   return triplet.indexOf(triplet.concat().sort(function(a, b) { return a - b })[1])
 }
+
+//solution 3
+
+const gimme = function (triplet) {
+  return triplet.indexOf([...triplet].sort((x, y) => x > y)[1]);
+};
