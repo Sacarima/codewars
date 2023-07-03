@@ -870,3 +870,17 @@ function gimme(triplet) {
 const gimme = function (triplet) {
   return triplet.indexOf([...triplet].sort((x, y) => x > y)[1]);
 };
+
+// solution 4
+
+var gimme = function (triplet) {
+  let index = 0;
+  let max = Math.max(...triplet);
+  let min = Math.min(...triplet);
+  for(let i = 0; i < triplet.length; i++){
+    if(triplet[i] !== max && triplet[i] !== min){        
+      index = i;
+    }
+  }
+  return index;
+};
