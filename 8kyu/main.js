@@ -666,6 +666,8 @@ function divisibleBy(numbers, divisor) {
 const divisibleBy = (numbers, divisor) => numbers.filter(number => !(number % divisor));
 
 
+/******************************* */
+
 /*
     ARE YOU PLAYING BANJO
 
@@ -720,3 +722,17 @@ function areYouPlayingBanjo(name) {
   return name[0].toLowerCase() == "r" ? name + " plays banjo" : name + " does not play banjo";
 }
 
+
+/*
+  Remove Exclamation Marks
+
+  Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
+
+
+*/
+
+// Solution 1
+
+function removeExclamationMarks(s) {
+  return s.replace(/!/g, '');
+}
