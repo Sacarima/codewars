@@ -749,3 +749,14 @@ function removeExclamationMarks(s) {
   return s.replaceAll('!', '');
 }
 
+
+// Solution 4
+
+
+function removeExclamationMarks(s) {
+  const arr =s.split("");
+  arr = arr.filter(function(e){
+        return e !== "!";
+    })
+    return arr.join("");
+}
