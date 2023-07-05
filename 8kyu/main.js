@@ -742,3 +742,10 @@ function removeExclamationMarks(s) {
 function removeExclamationMarks(s) {
   return s.split('!').join('');
 }
+
+// Solution 3
+
+function removeExclamationMarks(s) {
+  return s.replaceAll('!', '');
+}
+
