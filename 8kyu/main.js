@@ -736,3 +736,9 @@ function areYouPlayingBanjo(name) {
 function removeExclamationMarks(s) {
   return s.replace(/!/g, '');
 }
+
+// solution 2 
+
+function removeExclamationMarks(s) {
+  return s.split('!').join('');
+}
