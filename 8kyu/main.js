@@ -714,3 +714,9 @@ function areYouPlayingBanjo(name) {
   return name + (/^r/i.test(name) ? " plays " : " does not play ") + "banjo";
 }
 
+// Solution 5
+
+function areYouPlayingBanjo(name) {
+  return name[0].toLowerCase() == "r" ? name + " plays banjo" : name + " does not play banjo";
+}
+
