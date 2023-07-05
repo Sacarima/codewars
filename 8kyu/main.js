@@ -708,4 +708,9 @@ function areYouPlayingBanjo(name) {
     return name + " does not play banjo";
 }
 
+// Solution 4
+
+function areYouPlayingBanjo(name) {
+  return name + (/^r/i.test(name) ? " plays " : " does not play ") + "banjo";
+}
 
