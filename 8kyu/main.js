@@ -666,7 +666,7 @@ function divisibleBy(numbers, divisor) {
 const divisibleBy = (numbers, divisor) => numbers.filter(number => !(number % divisor));
 
 
-/******************************* */
+/*******************************5 */
 
 /*
     ARE YOU PLAYING BANJO
@@ -759,4 +759,11 @@ function removeExclamationMarks(s) {
         return e !== "!";
     })
     return arr.join("");
+}
+
+
+// Solution 5
+
+const removeExclamationMarks = (s) => {
+  return s.split('').filter((letter) => letter !== '!').join('')
 }
