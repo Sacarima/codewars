@@ -789,6 +789,7 @@ In languages with no distinct character data type, the second argument will be a
 
 // Solution 1
 
+// All star Code challenge#18
 function strCount(str, letter){  
   let result = 0
   for (let i = 0; i < str.length; i++) {
@@ -797,4 +798,11 @@ function strCount(str, letter){
     }
   }
   return result
+}
+
+
+// Solution 2 
+
+function strCount(str, letter){  
+  return str.split(letter).length-1
 }
