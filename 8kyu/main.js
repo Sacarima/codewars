@@ -820,3 +820,9 @@ function strCount(str, letter){
 function strCount(str, letter) {  
   return str.length - str.replace(new RegExp(letter, "gi"), '').length;
 }
+
+// Solution 5
+
+function strCount(str, letter){  
+  return (str.match(new RegExp(letter, 'g')) || []).length;
+}
