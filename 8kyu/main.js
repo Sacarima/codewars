@@ -836,3 +836,10 @@ function strCount(str, letter) {
   
   return count;
 }
+
+// Solution 7 
+
+const strCount = function f( str , letter ){  
+  const result= new RegExp( letter , "g" ); 
+  return str.length - str.replace( result , "" ).length  ;
+}
