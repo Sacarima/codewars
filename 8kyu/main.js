@@ -813,3 +813,10 @@ function strCount(str, letter){
 function strCount(str, letter){  
   return str.split('').filter(c => c == letter).length;
 }
+
+
+// Solution 4
+
+function strCount(str, letter) {  
+  return str.length - str.replace(new RegExp(letter, "gi"), '').length;
+}
