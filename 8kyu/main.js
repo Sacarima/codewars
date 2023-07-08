@@ -865,3 +865,10 @@ let greet = (name, onwer) => {
     return 'Hello guest'
   }
 }
+
+
+// Solution 2
+
+function greet (name, owner) {
+  return name === owner ? 'Hello boss' : 	'Hello guest';
+}
