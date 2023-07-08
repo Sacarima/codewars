@@ -843,3 +843,25 @@ const strCount = function f( str , letter ){
   const result= new RegExp( letter , "g" ); 
   return str.length - str.replace( result , "" ).length  ;
 }
+
+/*
+    Grasshopper - Personalized Message
+
+    Create a function that gives a personalized greeting. This function takes two parameters: name and owner.
+
+Use conditionals to return the proper message:
+
+case	return
+name equals owner	'Hello boss'
+otherwise	'Hello guest'
+*/
+
+// Solution 1
+
+let greet = (name, onwer) => {
+  if(name === onwer) {
+    return 'Hello boss'
+  }else {
+    return 'Hello guest'
+  }
+}
