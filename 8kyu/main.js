@@ -872,3 +872,9 @@ let greet = (name, onwer) => {
 function greet (name, owner) {
   return name === owner ? 'Hello boss' : 	'Hello guest';
 }
+
+//solution 3
+
+function greet (name, owner) {
+  return `Hello ${name==owner?'boss':'guest'}`
+}
