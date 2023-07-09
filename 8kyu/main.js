@@ -976,3 +976,11 @@ function correct(s){
     }
   return s.join('');
 }
+
+
+// Solution 4 
+
+
+function correct(string) {
+	return [...string].map(a => ({'0':'O','5':'S','1':'I'})[a]||a).join('')
+}
