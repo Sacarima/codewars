@@ -906,3 +906,10 @@ function doubleChar(str) {
   };
   return word;
 };
+
+
+// solution 3
+
+function doubleChar(str) {
+  return str.replace(/(.)/g, "$1$1")
+}
