@@ -952,3 +952,15 @@ The test cases contain numbers only by mistake.
 function correct(string){
   return string.replace(/5/g, 'S').replace(/1/g, 'I').replace(/0/g, 'O')
  }
+
+ // solution 2
+
+ const corrections = {
+	'5': 'S',
+	'0': 'O',
+  '1': 'I',
+};
+
+const correct = string => (
+	string.replace(/[501]/g, character => corrections[character])
+);
