@@ -923,3 +923,10 @@ function doubleChar(str) {
     return c + c;
   }).join("");
 }
+
+
+// solution 5 
+
+function doubleChar(str) {
+  return [...str].map(v=>v+v).join('');
+}
