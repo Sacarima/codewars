@@ -1008,3 +1008,13 @@ y is not considered a vowel for this kata
 function shortcut (string) {
   return string.replace(/[aeiou]/gi, '')
 }
+
+
+// Solution 2
+
+
+function shortcut(str) {
+  return str.split('').filter(function(e) {
+    return ['a', 'e', 'i', 'o', 'u'].indexOf(e) == -1 
+  }).join('')
+}
