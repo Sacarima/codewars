@@ -1018,3 +1018,14 @@ function shortcut(str) {
     return ['a', 'e', 'i', 'o', 'u'].indexOf(e) == -1 
   }).join('')
 }
+
+
+// solutioon 3 
+
+
+function shortcut (string) {
+  return string
+    .split('')
+    .filter(str => !'aeiou'.includes(str))
+    .join('')
+}
