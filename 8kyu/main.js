@@ -1029,3 +1029,18 @@ function shortcut (string) {
     .filter(str => !'aeiou'.includes(str))
     .join('')
 }
+
+
+// Solution 4 
+
+
+function shortcut(string){
+  let vowels = "aeiou";
+  let output = "";
+  for (let) i = 0; i < string.length; i++) {
+    if (!(vowels.indexOf(string[i]) > -1)) {
+      output += string[i];
+    }
+  }
+  return output;
+}
