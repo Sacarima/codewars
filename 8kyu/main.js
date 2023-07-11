@@ -1048,14 +1048,34 @@ function shortcut(string){
 // Solution 5
 
 function shortcut(string){
-  let vowels = 'aeiou';
-  
-  let result = [];
-  
-    for( let i = 0; i < string.length; i++){
-    if(!vowels.includes(string[i])){
-      result.push(string[i]);
-    }
+let vowels = 'aeiou';
+
+let result = [];
+
+  for( let i = 0; i < string.length; i++){
+  if(!vowels.includes(string[i])){
+    result.push(string[i]);
   }
-    return result.join('');
-  };
+}
+  return result.join('');
+};
+
+/*
+Do i get bonus
+
+It's bonus time in the big city! The fatcats are rubbing their paws in anticipation... but who is going to make the most money?
+
+Build a function that takes in two arguments (salary, bonus). Salary will be an integer, and bonus a boolean.
+
+If bonus is true, the salary should be multiplied by 10. If bonus is false, the fatcat did not make enough money and must receive only his stated salary.
+
+Return the total figure the individual will receive as a string prefixed with "£" (= "\u00A3", JS, Go, Java, Scala, and Julia), "$" (C#, C++, Ruby, Clojure, Elixir, PHP, Python, Haskell, and Lua) or "¥" (Rust).
+
+
+*/
+
+
+// Solution 1
+
+
+let bonusTime = (salary, bonus) => `£${salary * (bonus ? 10 : 1 )}`
