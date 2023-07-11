@@ -1086,3 +1086,15 @@ let bonusTime = (salary, bonus) => `£${salary * (bonus ? 10 : 1 )}`
 function bonusTime(salary, bonus) {
   return bonus ? `£${10 * salary}` : `£${salary}`;
 }
+
+
+// Solution 3
+
+function bonusTime(salary, bonus) 
+{
+  if(bonus)
+  {
+    return "£" + (salary*10).toString();
+  }
+  return "£" + salary.toString();
+}
