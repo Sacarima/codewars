@@ -1079,3 +1079,10 @@ Return the total figure the individual will receive as a string prefixed with "�
 
 
 let bonusTime = (salary, bonus) => `£${salary * (bonus ? 10 : 1 )}`
+
+
+// Solution 2
+
+function bonusTime(salary, bonus) {
+  return bonus ? `£${10 * salary}` : `£${salary}`;
+}
