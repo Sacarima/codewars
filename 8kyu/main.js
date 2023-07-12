@@ -1137,9 +1137,18 @@ Don't worry about numbers, special characters, or non-string types being passed 
 
 */
 
+
 // Solution 1 
 
 function capitalizeWord(word) {
   let sum = word[0].toUpperCase() + word.slice(1);
    return sum;
  }
+
+
+
+ // Solution 2
+
+
+
+ const capitalizeWord = (word) => word.replace(word.charAt(0), word.charAt(0).toUpperCase());
