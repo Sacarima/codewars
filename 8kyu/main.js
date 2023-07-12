@@ -1152,3 +1152,18 @@ function capitalizeWord(word) {
 
 
  const capitalizeWord = (word) => word.replace(word.charAt(0), word.charAt(0).toUpperCase());
+
+
+
+
+ 
+ // solution 3
+
+
+ function capitalizeWord(word) {
+  let str = word[0].toUpperCase();
+  for (let i = 1; i<word.length; i++) {
+  str += word[i];
+  }
+  return str;
+}
