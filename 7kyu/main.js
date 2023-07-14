@@ -912,3 +912,8 @@ function noOdds( values ){
   
   return values.filter(isEven);
 }
+
+
+// Solution 3
+
+var noOdds = values => values.filter(x => !(x % 2));
