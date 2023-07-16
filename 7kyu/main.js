@@ -980,3 +980,10 @@ function evenNumbers(array, number) {
   }
   return resultOfevens.slice(-number);
 }
+
+
+
+// Solution 2
+
+
+const evenNumbers = (array, number) => array.filter(item => item % 2 === 0).slice(-number);
