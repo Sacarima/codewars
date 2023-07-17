@@ -1018,3 +1018,6 @@ function smallEnough(a, limit){
   return Math.max(...a) <= limit
 }
 
+// SOLUTION 3
+
+smallEnough = (a, l) => a.every(e => e <= l)
