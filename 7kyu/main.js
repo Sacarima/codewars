@@ -1020,4 +1020,11 @@ function smallEnough(a, limit){
 
 // SOLUTION 3
 
-smallEnough = (a, l) => a.every(e => e <= l)
+const smallEnough = (a, l) => a.every(e => e <= l)
+
+
+// SOLUTION 4
+
+function smallEnough(a, limit){
+  return a.every(x => x <= limit);
+}
