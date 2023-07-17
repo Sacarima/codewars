@@ -1009,3 +1009,12 @@ function smallEnough(a, limit){
   }
   return true
 }
+
+
+// SOLUTION 2
+
+
+function smallEnough(a, limit){
+  return Math.max(...a) <= limit
+}
+
