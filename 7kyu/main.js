@@ -1069,3 +1069,24 @@ function minSum(arr) {
 
 const minSum = arr =>
   arr.sort((a, b) => a - b).reduce((pre, val) => pre + val * arr.pop(), 0);
+
+
+
+  /*
+    REVERSE WORDS
+
+    Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.
+
+Examples
+"This is an example!" ==> "sihT si na !elpmaxe"
+"double  spaces"      ==> "elbuod  secaps"
+  */
+
+
+function reverseWords(string) {
+  const words = string.split( ' ' );
+  const reverseWord = words.map(word => word.split('').reverse('').join(''));
+  const stringJoin = reverseWord.join( ' ' );
+  return stringJoin;
+    
+  }
