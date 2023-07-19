@@ -1064,3 +1064,8 @@ function minSum(arr) {
 function minSum(arr) {
   return arr.sort((a, b) => a - b).reduce((a, b) => (a + b * arr.pop()), 0)
 }
+
+// SOLUTION 3
+
+const minSum = arr =>
+  arr.sort((a, b) => a - b).reduce((pre, val) => pre + val * arr.pop(), 0);
