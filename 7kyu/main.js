@@ -1226,3 +1226,11 @@ function toNumberArray(stringarray){
   return result;
 }
 
+
+//  SOLUTION 2
+
+function toNumberArray(stringarray)
+{
+  return stringarray.map(parseFloat);
+}
+
