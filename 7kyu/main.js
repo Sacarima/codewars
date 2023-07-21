@@ -1234,3 +1234,9 @@ function toNumberArray(stringarray)
   return stringarray.map(parseFloat);
 }
 
+
+// SOLUTION 3
+
+
+const toNumberArray = stringarray => stringarray.map(Number);
+
