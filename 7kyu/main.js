@@ -1291,4 +1291,11 @@ for (i=0; i<questions.length; i++) {
   questions[key].usersAnswer = null;
 
 
+  // SOLUTION 4
+
+  for (obj of questions) {
+    obj['usersAnswer'] = null;
+  }
+
+
 
