@@ -1285,4 +1285,10 @@ for (i=0; i<questions.length; i++) {
   };
 
 
+  //  SOLUTION 3
+
+  for (key in questions)
+  questions[key].usersAnswer = null;
+
+
 
