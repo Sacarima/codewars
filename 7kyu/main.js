@@ -1278,4 +1278,11 @@ var questions = [{
 questions.forEach((a)=> {a.usersAnswer = null})
 
 
+// SOLUTION 2
+
+for (i=0; i<questions.length; i++) {
+  questions[i].usersAnswer = null;
+  };
+
+
 
