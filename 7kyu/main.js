@@ -1329,3 +1329,11 @@ const maskify = cc => cc.slice(-4).padStart(cc.length, '#')
 function maskify(cc) {
   return cc.slice(0, -4).replace(/./g, '#') + cc.slice(-4);
 }
+
+
+// SOLUTION 3
+
+function maskify(cc) {
+  return cc.replace(/.(?=....)/g, '#');
+}
+
