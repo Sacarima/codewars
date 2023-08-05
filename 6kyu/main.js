@@ -247,3 +247,12 @@ function arrayDiff(a, b) {
 function array_diff(a, b) {
   return a.filter(function(x) { return b.indexOf(x) == -1; });
 }
+
+
+// SOLUTION 4
+
+
+function array_diff(a, b) {
+  b = new Set(b)
+  return a.filter(v => !b.has(v))
+}
