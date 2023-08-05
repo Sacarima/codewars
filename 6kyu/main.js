@@ -232,3 +232,11 @@ function arrayDiff(a, b) {
    }
    return result;
  }
+
+
+ // SOLUTION 2
+
+
+ function array_diff(a, b) {
+  return a.filter(e => !b.includes(e));
+}
