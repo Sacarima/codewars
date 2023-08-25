@@ -65,7 +65,7 @@ function stringToArray(string) {
 }
 
 console.log(stringToArray("I love arrays they are my favorite"));
-
+////////////////////////stopppppped hereeeeeeee
 /*
 Complete the solution so that it reverses the string passed into it.
 
@@ -334,7 +334,7 @@ function fakeBin(x) {
 function fakeBin(x) {
   return x.replace(/\d/g, d => d < 5 ? 0 : 1);
 }
-
+/////////////////HEEEEEEEERRRRRRRRRRREEEEEEEEEEEE
 /*
   COUNT BY X 
   Create a function with two arguments that will return an array of the first n multiples of x.
