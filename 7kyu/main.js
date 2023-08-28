@@ -1405,3 +1405,22 @@ const binaryArrayToNumber = arr => {
 };
 
 
+//SOLUTION 2
+
+const binaryArrayToNumber = arr => {
+
+arr.reverse();
+  var count = 0;
+  
+  for(var i = 0; i < arr.length; i++){
+      if(arr[i] === 1){
+        count += Math.pow(2,i);
+      }
+    
+
+  }
+    
+    return count;
+
+  
+};
