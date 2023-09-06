@@ -1465,3 +1465,24 @@ solution('abc', 'd') // returns false
 function solution(str, ending){
   return str.endsWith(ending)
 }
+
+/*
+  Given a string, capitalize the letters that occupy even indexes and odd indexes separately, and return as shown below. Index 0 will be considered even.
+
+For example, capitalize("abcdef") = ['AbCdEf', 'aBcDeF']. See test cases for more examples.
+
+The input will be a lowercase string with no spaces.
+
+Good luck!
+
+If you like this Kata, please try:
+
+Indexed capitalization
+*/
+
+
+//solution 1
+
+function capitalize(s){
+  return [0,1].map(r=>[...s].map((c,i)=>i%2===r?c.toUpperCase():c).join(''));
+};
