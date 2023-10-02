@@ -1176,3 +1176,15 @@ function capitalizeWord(word) {
 function addLength(str) {
   return str.split(' ').map((here) => `${here} ${here.length}`)
 }
+
+
+// SOLUTION 2 
+function addLength(str) {
+  let split = str.split(" ");
+  let result = [];
+   
+  for (i = 0; i < split.length; ++i) {
+    result.push(split[i] + " " + split[i].length);
+  } 
+  return result;  
+}
