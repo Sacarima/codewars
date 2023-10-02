@@ -1037,7 +1037,7 @@ function shortcut (string) {
 function shortcut(string){
   let vowels = "aeiou";
   let output = "";
-  for (let) i = 0; i < string.length; i++) {
+  for (let i = 0; i < string.length; i++) {
     if (!(vowels.indexOf(string[i]) > -1)) {
       output += string[i];
     }
@@ -1166,4 +1166,13 @@ function capitalizeWord(word) {
   str += word[i];
   }
   return str;
+}
+
+
+// ADD LENGTH
+
+// SOLUTION 1
+
+function addLength(str) {
+  return str.split(' ').map((here) => `${here} ${here.length}`)
 }
