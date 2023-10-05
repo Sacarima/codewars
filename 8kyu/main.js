@@ -1209,3 +1209,10 @@ Input -> Output
 function distinct(a) {
   return [... new Set(a)];
 }
+
+// Solution 2 
+
+function distinct(a) {
+  return Array.from(new Set(a));
+}
+
