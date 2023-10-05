@@ -1232,3 +1232,20 @@ return res;
 // solution 4
 
 const distinct = a => a.filter((item, index) => a.indexOf(item) === index);
+
+
+/*
+
+Name Shuffler
+Write a function that returns a string in which firstname is swapped with last name.
+
+Example(Input --> Output)
+
+"john McClane" --> "McClane john"
+*/
+
+// SOLUTION 1
+
+function nameShuffler(str){
+  return str.split(' ').reverse().join(' ')
+}
