@@ -1292,3 +1292,9 @@ function mergeArrays(arr1, arr2) {
   mergedArrays = Array.from(mergedArrays)
   return mergedArrays.sort((a, b) => a - b)
 }
+
+// SOLUTION 2 
+
+function mergeArrays(arr1, arr2) {
+  return Array.from(new Set(arr1.concat(arr2).sort((a,b) => (a-b))));
+}
