@@ -1341,3 +1341,8 @@ function stringy(size) {
 
 const stringy = size => "10".repeat(size).slice(0,size);
 
+
+//  SOLUTION 3
+
+const stringy = size =>
+  ``.padStart(size, `10`);
