@@ -1352,3 +1352,14 @@ const stringy = size =>
   function stringy(size) {
     return new Array(size).join('10').substr(0,size)   
   }
+
+  /*
+    String Templates - Bug Fixing #5
+    Oh no! Timmy hasn't followed instructions very carefully and forgot how to use the new String Template feature, Help Timmy with his string template so it works as he expects!
+  */
+
+    // SOLUTION 1 
+
+    function buildString(...template){
+      return `I like ${template.join(', ')}!`;
+    }
