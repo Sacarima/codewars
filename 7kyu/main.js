@@ -1486,3 +1486,14 @@ Indexed capitalization
 function capitalize(s){
   return [0,1].map(r=>[...s].map((c,i)=>i%2===r?c.toUpperCase():c).join(''));
 };
+
+/*
+  Failed Sort - Bug Fixing #4
+Oh no, Timmy's Sort doesn't seem to be working? Your task is to fix the sortArray function to sort all numbers in ascending order
+*/
+
+// SOLUTION 1 
+
+var sortArray = function(value) {
+  return value.split('').sort((c, p) => c - p ).join('');
+}
