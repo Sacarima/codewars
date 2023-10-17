@@ -1346,3 +1346,9 @@ const stringy = size => "10".repeat(size).slice(0,size);
 
 const stringy = size =>
   ``.padStart(size, `10`);
+
+  // SOLUTION 4
+
+  function stringy(size) {
+    return new Array(size).join('10').substr(0,size)   
+  }
