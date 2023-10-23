@@ -1363,3 +1363,14 @@ const stringy = size =>
     function buildString(...template){
       return `I like ${template.join(', ')}!`;
     }
+
+    /*
+          Multiplication table for number
+    */
+
+  // SOLUTION 1
+
+  function multiTable(number) {
+    let arrayNumbers = [1,2,3,4,5,6,7,8,9,10]
+    return arrayNumbers.map(item => `${item} * ${number} = ${item*number}`).join('\n');
+  }
