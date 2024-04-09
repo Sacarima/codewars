@@ -1,5 +1,6 @@
 /*
-    In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
+    In this little assignment you are given a string of space separated numbers, 
+    and have to return the highest and lowest number.
 
 Examples
 highAndLow("1 2 3 4 5");  // return "5 1"
@@ -1497,3 +1498,6 @@ Oh no, Timmy's Sort doesn't seem to be working? Your task is to fix the sortArra
 var sortArray = function(value) {
   return value.split('').sort((c, p) => c - p ).join('');
 }
+
+
+

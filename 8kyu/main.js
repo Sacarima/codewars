@@ -1530,3 +1530,23 @@ function sorter(textbooks) {
   return textbooks.sort((a, b) => a.toLowerCase() > b.toLowerCase() ? 1 : 
                                   a.toLowerCase() < b.toLowerCase() ? -1  : 0)
 }
+
+
+//  convert to stringg                                                                                                        convert to string
+//solutio 1 
+function numberToString(num) {
+  // Return a string of the number here!
+  return num.toString()
+}
+
+// remove the ffiirst and last character of a string
+
+// solution 1
+
+function removeChar(n, s){
+  let stringCol = ''
+  for(let i = 0; i < n; i++) {
+    stringCol += s
+  }
+  return stringCol
+}
