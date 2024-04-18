@@ -1663,3 +1663,17 @@ In this kata you need to check the provided array (x) for good ideas 'good' and 
         return 'I smell a series!'
       }
     }
+
+    /**
+     * 
+     * It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string. You're given one parameter, the original string. You don't have to worry about strings with less than two characters.
+     * 
+     */
+
+    // Solution 1
+
+    function removeChar(str){
+      //You got this!
+       return str.split('').slice(1, -1).join('')
+     
+     };
