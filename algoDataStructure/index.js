@@ -128,4 +128,65 @@ var fizzBuzz = function(n) {
         return max;
     }
 
-// 
+/*
+    Write a function longestWord that takes in a sentance string as am argumaent.
+    The function should return the longest word in the sentance. If there is a tie, return the word that occurs later in the sentance.
+    you can assume that the sentence is non-empty.
+
+
+    examples:    longestWord("I love programming"); // -> "programming"
+    longestWord("I love dogs"); // -> "love"
+    longestWord("fun&!! time"); // -> "time"
+    longestWord("I have a pet cat"); // -> "have"
+    longestWord("hello hello world"); // -> "world"
+    longestWord("abc def ghi"); // -> "ghi"
+    longestWord("abc defgh ijk lmno p"); // -> "lmno"  
+    longestWord("what a wonderful world"); // -> 'wonderful'
+    longestWord("the quick brown fox jumped over the lazy dog"); // -> 'jumped'
+    longestWord("who did eat the ham"); // -> 'ham'
+
+    Approach:
+    we can start by splitting the string into an array of words using the split method
+    then we can iterate through the array of words and keep track of the longest word found so far
+    we can use a variable to store the longest word and update it whenever we find a longer word
+    if we find a word that is the same length as the longest word, we update it to the new word since we want the one that occurs later in the sentence
+    finally, we return the longest word found
+
+    walkthrough:
+    let's take the example "I love programming"
+    we split the string into an array of words: ["I", "love", "programming"]
+    we initialize a variable longest to an empty string
+    we iterate through the array of words:
+    - first word is "I", its length is 1, which is greater than the length of longest (0), so we update longest to "I"
+    - second word is "love", its length is 4, which is greater than the length of longest (1), so we update longest to "love"
+    - third word is "programming", its length is 11, which is greater than the length of longest (4), so we update longest to "programming"
+    finally, we return longest which is "programming"
+
+    complexity:
+    Time complexity: O(n) - linear time, where n is the number of words in the sentence. We have to go through each word once.
+    Space complexity: O(1) - constant space, we are using a fixed amount of space regardless of the input size  
+
+ */
+
+    function longestWord(sentance) {
+        const words = sentance.split(" "); // split the string into an array of words
+        let longest = ""; // initialize a variable to store the longest word
+        for (let word of words) { // iterate through the array of words
+            if (word.length >= longest.length) { // check if the current word is longer than or equal to the longest word found so far
+                longest = word; // update longest to the current word
+            }
+        }
+        return longest; // return the longest word found
+    }
+
+    // test cases
+    console.log(longestWord("I love programming")); // -> "programming"
+    console.log(longestWord("I love dogs")); // -> "love"
+    console.log(longestWord("fun&!! time")); // -> "time"
+    console.log(longestWord("I have a pet cat")); // -> "have"
+    console.log(longestWord("hello hello world")); // -> "world"
+    console.log(longestWord("abc def ghi")); // -> "ghi"
+    console.log(longestWord("abc defgh ijk lmno p")); // -> "lmno"
+    console.log(longestWord("what a wonderful world")); // -> 'wonderful'
+    console.log(longestWord("the quick brown fox jumped over the lazy dog")); // -> 'jumped'
+    console.log(longestWord("who did eat the ham")); // -> 'ham'
