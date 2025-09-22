@@ -190,3 +190,85 @@ var fizzBuzz = function(n) {
     console.log(longestWord("what a wonderful world")); // -> 'wonderful'
     console.log(longestWord("the quick brown fox jumped over the lazy dog")); // -> 'jumped'
     console.log(longestWord("who did eat the ham")); // -> 'ham'
+
+
+    /**
+     
+      FIBONACCI SEQUENCE
+      write a function that returns the fibonacci sequence up to a given number n.
+      The fibonacci sequence is a series of numbers where each number is the sum of the two preceding ones, usually starting with 0 and 1.
+      The sequence goes like this: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...
+
+      examples:
+      fibonacci(5); // -> [0, 1, 1, 2, 3]
+      fibonacci(10); // -> [0, 1, 1, 2, 3, 5, 8]
+      fibonacci(15); // -> [0, 1, 1, 2, 3, 5, 8, 13]
+      fibonacci(1); // -> [0]
+      fibonacci(2); // -> [0, 1]
+      fibonacci(3); // -> [0, 1, 1]
+      fibonacci(4); // -> [0, 1, 1, 2]
+      fibonacci(20); // -> [0, 1, 1, 2, 3, 5, 8, 13]
+      fibonacci(25); // -> [0, 1, 1, 2, 3, 5, 8, 13, 21]
+
+      Approach:
+      we can start by initializing an array with the first two numbers of the fibonacci sequence: [0, 1]
+      then we can use a while loop to generate the next numbers in the sequence until we reach the given number n
+      in each iteration of the loop, we can calculate the next number by adding the last two numbers in the array
+      we can then push this new number to the array
+      finally, we return the array
+
+      walkthrough:
+      let's take the example n = 10
+      we initialize an array fib = [0, 1]
+      we enter the while loop since the last number in fib (
+     
+     */
+
+    function fibonacci(n) {
+        if (n <= 0) return []; // if n is less than or equal to 0, return an empty array
+        if (n === 1) return [0]; // if n is 1, return an array with only the first number of the fibonacci sequence
+        const fib = [0, 1]; // initialize an array with the first two numbers of the fibonacci sequence
+        while (true) { // use a while loop to generate the next numbers in the sequence
+            const next = fib[fib.length - 1] + fib[fib.length - 2]; // calculate the next number by adding the last two numbers in the array
+            if (next >= n) break; // if the next number is greater than or equal to n, break the loop
+            fib.push(next); // push the new number to the array
+        }
+        return fib; // return the array
+    }
+
+    // test cases
+    console.log(fibonacci(5)); // -> [0, 1, 1, 2, 3]
+    console.log(fibonacci(10)); // -> [0, 1, 1, 2, 3, 5, 8]
+    console.log(fibonacci(15)); // -> [0, 1, 1, 2, 3, 5, 8, 13]
+    console.log(fibonacci(1)); // -> [0]
+    console.log(fibonacci(2)); // -> [0, 1]
+    console.log(fibonacci(3)); // -> [0, 1, 1]
+    console.log(fibonacci(4)); // -> [0, 1, 1, 2]
+    console.log(fibonacci(20)); // -> [0, 1, 1, 2, 3, 5, 8, 13]
+    console.log(fibonacci(25)); // -> [0, 1, 1, 2, 3, 5, 8, 13, 21]
+
+    // complexity
+    // Time complexity: O(m) - linear time, where m is the number of fibonacci numbers less than n. We have to go through each number once.
+    // Space complexity: O(m) - linear space, where m is the number of fibonacci numbers less than n. We are storing all the fibonacci numbers in an array. 
+
+
+    function fibonacci2(n) {
+        if ( n > 2 ) return n 
+        let result = [0, 1]
+        for  ( let i = 2; i < n; i++ )  {
+            result[i] = result[i - 1] + result[i - 2]
+        }
+        return result  
+    }
+
+    console.log(fibonacci2(5)); // -> [0, 1, 1, 2, 3]
+    console.log(fibonacci2(10)); // -> [0, 1, 1, 2, 3, 5, 8]
+    console.log(fibonacci2(15)); // -> [0, 1, 1, 2, 3, 5, 8, 13]
+    console.log(fibonacci2(1)); // -> [0]
+    console.log(fibonacci2(2)); // -> [0, 1]
+    console.log(fibonacci2(3)); // -> [0, 1, 1]
+    console.log(fibonacci2(4)); // -> [0, 1, 1, 2]
+    console.log(fibonacci2(20)); // -> [0, 1, 1, 2, 3, 5, 8, 13]
+    console.log(fibonacci2(25)); // -> [0, 1, 1, 2,
+
+
