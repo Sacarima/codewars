@@ -271,4 +271,121 @@ var fizzBuzz = function(n) {
     console.log(fibonacci2(20)); // -> [0, 1, 1, 2, 3, 5, 8, 13]
     console.log(fibonacci2(25)); // -> [0, 1, 1, 2,
 
+/*
+    IS PRIME
 
+    Write a function, isPrime, that takes in a number as an argument. The function should return a boolean indicating 
+    whether or not the given number is prime.
+
+    A prime number is a number that is only divisible by itself and 1.
+    For example, 7 is a prime number because it is only divisible by 1 and 7.
+    4 is not a prime number because it is divisible by 1, 2, and 4.
+
+    You can assume that the input number is a positive integer.
+
+    examples:
+    isPrime(2); // -> true
+    isPrime(3); // -> true
+    isPrime(4); // -> false
+    isPrime(5); // -> true
+    isPrime(6); // -> false
+    isPrime(7); // -> true
+    isPrime(8); // -> false
+    isPrime(9); // -> false
+    isPrime(10); // -> false
+    isPrime(11); // -> true
+    isPrime(12); // -> false
+    isPrime(13); // -> true
+    isPrime(14); // -> false
+    isPrime(15); // -> false
+    isPrime(2); // -> true
+
+    Approach
+    input : 7 true
+    innput : 11 true
+    if I can find a number that can divide with the number other than one and itself then that cannot possibly be a prime number
+
+     check any possible deviiser and factor of 7, and what range will they be ?
+    since out example is 7 the range will be from 2- 6 but not including 7
+    2,3,4,5,6.
+
+    we are not including 1 because 1 is. a factor of 7, and we're not including 7 for the same reason
+    now we are ready to iterate
+
+   then I an check, is my input 2 devisible by 2? No, since its not I move to the next number 
+   is 7 devisible by 3, I continue this on until I reach 6, if thee are no devisible number by 7 then it means
+   7 is indeed a prime number because it can only be devisible by one and itself
+
+    complexity
+    Time complexity: O(n) - linear time, where n is the input number. In the worst case, we have to check all numbers from 2 to n-1.
+    Space complexity: O(1) - constant space, we are using a fixed amount of space regardless of the input size.
+    edge cases:
+    1 is not a prime number
+    2 is the only even prime number
+    negative numbers are not prime numbers
+    0 is not a prime number
+    1 is not a prime number
+    2 is the only even prime number
+    negative numbers are not prime numbers
+    0 is not a prime number 
+    1 is not a prime number
+
+    0 is not a prime number
+
+
+*/
+
+function isPrime(n) {
+    if ( n < 2 ) return false; // edge case, 0 and 1 are not prime numbers
+    for ( let i = 2; i < n; i++ ) { // iterate from 2 to n-1
+        if ( n % i === 0 ) return false; // if n is divisible by i, then n is not a prime number
+    }
+    return true; // if no divisors were found, then n is a prime number
+}
+
+// test cases
+console.log(isPrime(2)); // -> true
+console.log(isPrime(3)); // -> true
+console.log(isPrime(4)); // -> false
+console.log(isPrime(5)); // -> true
+console.log(isPrime(6)); // -> false
+console.log(isPrime(7)); // -> true
+console.log(isPrime(8)); // -> false
+console.log(isPrime(9)); // -> false
+console.log(isPrime(10)); // -> false
+
+//complexity
+// Time complexity: O(n) - linear time, where n is the input number. In the worst case, we have to check all numbers from 2 to n-1.
+// Space complexity: O(1) - constant space, we are using a fixed amount of space regardless of the input size.
+
+function isPrime2(n) {
+    if ( n < 2 ) return false; // edge case, 0 and 1 are not prime numbers
+    for ( let i = 2; i <= Math.sqrt(n); i++ ) { // iterate from 2 to the square root of n
+        if ( n % i === 0 ) return false; // if n is divisible by i, then n is not a prime number
+    }
+    return true; // if no divisors were found, then n is a prime number
+}
+
+// test cases
+console.log(isPrime2(2)); // -> true
+console.log(isPrime2(3)); // -> true
+console.log(isPrime2(4)); // -> false
+console.log(isPrime2(5)); // -> true
+console.log(isPrime2(6)); // -> false
+console.log(isPrime2(7)); // -> true
+console.log(isPrime2(8)); // -> false
+console.log(isPrime2(9)); // -> false
+console.log(isPrime2(10)); // -> false
+console.log(isPrime2(11)); // -> true
+console.log(isPrime2(12)); // -> false
+console.log(isPrime2(13)); // -> true
+console.log(isPrime2(14)); // -> false
+console.log(isPrime2(15)); // -> false
+console.log(isPrime2(1)); // -> false
+console.log(isPrime2(0)); // -> false
+console.log(isPrime2(-5)); // -> false
+console.log(isPrime2(29));
+
+//complexity
+// Time complexity: O(sqrt(n)) - square root time, where n is the input number. In the worst case, we have to check all numbers from 2 to sqrt(n).
+// Space complexity: O(1) - constant space, we are using a fixed amount of space regardless of the input size.
