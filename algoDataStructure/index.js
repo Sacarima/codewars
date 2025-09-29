@@ -389,3 +389,74 @@ console.log(isPrime2(29));
 //complexity
 // Time complexity: O(sqrt(n)) - square root time, where n is the input number. In the worst case, we have to check all numbers from 2 to sqrt(n).
 // Space complexity: O(1) - constant space, we are using a fixed amount of space regardless of the input size.
+
+
+/*
+    PAIRS
+
+    Write a function, pairs, that takes in an array as an argument. The function should return 
+    an array containing all unique pairs of elements.
+
+    you may return the pairs in any order and the order of elements within a single pair does not matter.
+    You can assume that the input array contains unique elements.
+
+    examples:
+    pairs(["a", "b", "c"]); // ->
+// [
+//    ["a", "b"],
+//    ["a", "c"],
+//    ["b", "c"]
+// ]
+
+ ab, ac, bc
+ a, b, c
+ a, b, c
+ ab ac
+*/
+
+function pairs(arr) {
+    const result = []
+
+    for (let i = 0; i < arr.length; i += 1) {
+        for (let j = i + 1; j < arr.length; j += 1) {
+            let add = [arr[i], arr[j]]
+            result.push(add)
+        }
+    }
+
+    return result
+}
+
+//complexity
+// Time complexity: O(n^2) - quadratic time, where n is the length of the input array. We have a nested loop that goes through each element in the array.
+// Space complexity: O(n^2) - quadratic space, where n is the length of the input array. In the worst case, we may have to store all possible pairs in the result array.
+
+// different solution
+function pairs2(arr) {
+    const result = []
+
+    for (let i = 0; i < arr.length; i += 1) {
+        for (let j = 0; j < arr.length; j += 1) {
+            if (i !== j) {
+                let add = [arr[i], arr[j]]
+                let reversedAdd = [arr[j], arr[i]]
+                if (!result.some(pair => (pair[0] === add[0] && pair[1] === add[1]) || (pair[0] === reversedAdd[0] && pair[1] === reversedAdd[1]))) {
+                    result.push(add)
+                }
+            }
+        }
+    }
+
+    return result
+}
+
+// test cases
+console.log(pairs(["a", "b", "c"])); // -> [ ["a", "b"], ["a", "c"], ["b", "c"] ]
+console.log(pairs([1, 2, 3])); // -> [ [1, 2], [1, 3], [2, 3] ]
+console.log(pairs(["a", "b", "c", "d"])); // -> [ ["a", "b"], ["a", "c"], ["a", "d"], ["b", "c"], ["b", "d"], ["c", "d"] ]
+console.log(pairs([1, 2, 3, 4])); // -> [ [1, 2], [1, 3], [1, 4], [2, 3], [2, 4], [3, 4] ]
+console.log(pairs(["x", "y", "z"]));
+
+// complexity
+// Time complexity: O(n^2) - quadratic time, where n is the length of the input array. We have a nested loop that goes through each element in the array.
+// Space complexity: O(n^2) - quadratic space, where n is the length of the input array. In the worst case, we may have to store all possible pairs in the result array.    
